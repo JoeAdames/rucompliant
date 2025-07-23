@@ -1,4 +1,4 @@
-# Controls Assessment Checklist
+# ✅ Controls Assessment Checklist
 
 - [ ] Least Privilege
 - [ ] Disaster Recovery Plans
@@ -15,7 +15,7 @@
 - [ ] Closed-Circuit Television (CCTV) Surveillance
 - [ ] Fire Detection/Prevention (fire alarms, sprinkler system, etc.)
 
-# Compliance Checklist
+# ✅ Compliance Checklist
 
 ## Payment Card Industry Data Security Standard (PCI DSS)
 

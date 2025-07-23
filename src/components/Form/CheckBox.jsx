@@ -7,7 +7,7 @@ export default function CheckBox({ title }) {
         id="subscribe"
         name="subscribe"
         type="checkbox"
-        className="h-5 w-5 text-purple-500 bg-gray-700 border-gray-600 rounded focus:ring-purple-500 focus:ring-2"
+        className="h-5 w-5 text-indigo-400 bg-zinc-700 border-zinc-600 rounded focus:ring-indigo-500 focus:ring-2"
       />
       <label htmlFor="subscribe" className="ml-3 text-gray-100">
         {title}
