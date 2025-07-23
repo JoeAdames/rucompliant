@@ -1,4 +1,16 @@
-# ✅ Controls Assessment Checklist
+# The goal of this application
+
+- Generate a Security Audit
+
+First time use - Enter Data into forms, submit and generate a report.
+
+The data for this form can be downloaded into either markdown, PDF, or JSON file
+
+After Fist use Time use - Import JSON file previously generated OR generate new report
+
+Below are the items to be checked.
+
+# Controls Assessment Checklist
 
 - [x] Least Privilege
 - [x] Disaster Recovery Plans
