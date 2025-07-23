@@ -1,6 +1,6 @@
 # The goal of this application
 
-- Generate a Security Audit
+Generate a Security Audit
 
 First time use - Enter Data into forms, submit and generate a report.
 
