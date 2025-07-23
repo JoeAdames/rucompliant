@@ -21,7 +21,7 @@ export default function Form() {
           key={form.category}
           className="bg-zinc-800 rounded-2xl shadow-lg p-6 space-y-6 my-4"
         >
-          <div className="text-xl font-bold text-gray-100 mb-2 text-center text-indigo-400">
+          <div className="text-xl font-bold mb-2 text-center text-indigo-400">
             {form.category}
           </div>
           {form.items.map((item) => (

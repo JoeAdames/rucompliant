@@ -7,7 +7,7 @@ export const FormProvider = ({ children }) => {
     {
       category: "Security Controls",
       items: [
-        { name: "Least Privelage", checked: false, details: "" },
+        { name: "Least Privilege", checked: false, details: "" },
         { name: "Disaster Recovery Plans", checked: false, details: "" },
         { name: "Password Policies", checked: false, details: "" },
         { name: "Separation of Duties", checked: false, details: "" },
