@@ -6,7 +6,7 @@ First time use - Enter Data into forms, submit and generate a report.
 
 The data for this form can be downloaded into either markdown, PDF, or JSON file
 
-After Fist use Time use - Import JSON file previously generated OR generate new report
+After First use Time use - Import JSON file previously generated OR generate new report
 
 Below are the items to be checked.
 
