@@ -3,7 +3,7 @@ import React, { useState, useContext, createContext, useEffect } from "react";
 const FormContext = createContext();
 
 export const FormProvider = ({ children }) => {
-  const [forms, setForms] = useState([
+  const forms = [
     {
       category: "Security Controls",
       items: [
@@ -117,10 +117,13 @@ export const FormProvider = ({ children }) => {
         },
       ],
     },
-  ]);
+  ];
+  const [submittedForms, setSubmittedForms] = useState();
 
   return (
-    <FormContext.Provider value={{ forms }}>{children}</FormContext.Provider>
+    <FormContext.Provider value={{ forms, submittedForms, setSubmittedForms }}>
+      {children}
+    </FormContext.Provider>
   );
 };
 
