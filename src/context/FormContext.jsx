@@ -118,10 +118,32 @@ export const FormProvider = ({ children }) => {
       ],
     },
   ];
-  const [submittedForms, setSubmittedForms] = useState();
+  const [submittedForms, setSubmittedForms] = useState(() => {
+    try {
+      const storedData = localStorage.getItem("myForms");
+      return storedData ? JSON.parse(storedData) : null;
+    } catch (error) {
+      console.log("no local storage:", error);
+    }
+  });
+  useEffect(() => {
+    try {
+      localStorage.setItem("myForms", JSON.stringify(submittedForms));
+    } catch (error) {
+      console.log("cannot store:", error);
+    }
+  }, [submittedForms]);
+
+  const resetStorage = () => {
+    localStorage.clear();
+    setSubmittedForms(null);
+    console.log(localStorage);
+  };
 
   return (
-    <FormContext.Provider value={{ forms, submittedForms, setSubmittedForms }}>
+    <FormContext.Provider
+      value={{ forms, submittedForms, setSubmittedForms, resetStorage }}
+    >
       {children}
     </FormContext.Provider>
   );

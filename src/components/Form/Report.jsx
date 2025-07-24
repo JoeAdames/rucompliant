@@ -2,7 +2,7 @@ import React from "react";
 import { useForms } from "../../context/FormContext";
 
 export default function Report() {
-  const { submittedForms } = useForms();
+  const { submittedForms, resetStorage } = useForms();
 
   const checkedItems = submittedForms
     .map((section) => {
@@ -23,7 +23,13 @@ export default function Report() {
   };
 
   return (
-    <section className="w-full max-w-lg sm:max-w-3xl mt-5">
+    <section className="w-full max-w-lg sm:max-w-4xl mt-5">
+      <button
+        onClick={resetStorage}
+        className="px-4 py-1 my-2 rounded-lg text-slate-100 bg-indigo-400"
+      >
+        Reset
+      </button>
       <div className="bg-zinc-800 border border-slate-100 rounded-lg p-5">
         <div className="flex justify-between my-2 text-indigo-400 text-xl">
           <div>Category</div>
@@ -69,7 +75,7 @@ export default function Report() {
               <li key={i} className="p-5">
                 {/* <pre>{JSON.stringify(item, null, 2)}</pre> */}
                 <div className="flex justify-between my-3">
-                  <div className="w-95 text-xl">
+                  <div className="w-150 font-bold0 text-xl">
                     {submittedForms[i].items[j].name}
                   </div>
                   <div
