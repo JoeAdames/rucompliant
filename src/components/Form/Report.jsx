@@ -7,7 +7,6 @@ export default function Report() {
   const checkedItems = submittedForms
     .map((section) => {
       const checkedItems = section.items.filter((item) => item.checked);
-      if (checkedItems.length === 0) return null;
 
       return {
         category: section.category,
@@ -18,6 +17,8 @@ export default function Report() {
 
   const calculatePercentage = (score, possibleScore) => {
     if (possibleScore === 0) return 0;
+    console.log(score);
+
     const percentScore = (score / possibleScore) * 100;
     return Math.trunc(percentScore);
   };
@@ -26,7 +27,7 @@ export default function Report() {
     <section className="w-full max-w-lg sm:max-w-4xl mt-5">
       <button
         onClick={resetStorage}
-        className="px-4 py-1 my-2 rounded-lg text-slate-100 bg-indigo-400"
+        className="px-4 py-1 my-2 rounded-lg text-slate-100 bg-indigo-400 text-"
       >
         Reset
       </button>
@@ -73,7 +74,6 @@ export default function Report() {
           <ul className="">
             {submittedForms[i].items.map((item, j) => (
               <li key={i} className="p-5">
-                {/* <pre>{JSON.stringify(item, null, 2)}</pre> */}
                 <div className="flex justify-between my-3">
                   <div className="w-150 font-bold0 text-xl">
                     {submittedForms[i].items[j].name}
@@ -100,7 +100,6 @@ export default function Report() {
           </ul>
         </div>
       ))}
-      {/* <pre>{JSON.stringify(checkedItems, null, 2)}</pre> */}
     </section>
   );
 }
